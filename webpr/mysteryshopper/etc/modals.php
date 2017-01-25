@@ -485,4 +485,55 @@ function progTres($participante, $salones){
         return;
     }
 }
+
+function referir1(){
+    $cantidad = 0;
+    echo "Refiere o Invita a otra persona, para que pertenezca a nuestro grupo de participantes de <b><i>Mystery Shoppers</i></b>:";
+    echo "<br><form class='form-header' role='form' method='POST' id='ms_referir'>
+         <div class='form-group'>
+            <label for='cantidad_e'>Ingresaré... </label>
+
+            <div class='btn-group'>
+                <button type='button' class='btn btn-primary' onclick='".cantidadReferir(0)."'>1 <span class='glyphicon glyphicon-envelope'></span></button>
+                <button type='button' class='btn btn-default' onclick='myAjax()'>2 <span class='glyphicon glyphicon-envelope'></span></button>
+                <button type='button' class='btn btn-default' onclick='".cantidadReferir(0)."'>3 <span class='glyphicon glyphicon-envelope'></span></button>
+                <button type='button' class='btn btn-default' onclick='".cantidadReferir(0)."'>4 <span class='glyphicon glyphicon-envelope'></span></button>
+                <button type='button' class='btn btn-default' onclick='".cantidadReferir(0)."'>5 <span class='glyphicon glyphicon-envelope'></span></button>
+                <button type='button' class='btn btn-default' onclick='".cantidadReferir(0)."'>6 <span class='glyphicon glyphicon-envelope'></span></button>
+                <button type='button' class='btn btn-default' onclick='".cantidadReferir(0)."'>7 <span class='glyphicon glyphicon-envelope'></span></button>
+                <button type='button' class='btn btn-default' onclick='".cantidadReferir(0)."'>8 <span class='glyphicon glyphicon-envelope'></span></button>
+            </div>
+        </div>
+
+        <div class='form-group'>
+                <label for='emails'>Ingrese aquí el (o los) correo eléctronicos:<br></label>
+                <input class='form-control input-lg' name='emails0' id='emails' type='text' placeholder='Correo eléctronico(s)' required>
+        </div>";
+        echo "<span id='textoVacio'></span>";
+        //cantidadReferir($cantidad);
+        echo "<br><div class='form-group'>
+        <button type='submit' class='btn btn-primary' id='referirBoton' name='referir'>Enviar Invitaciones</button>
+        </div>
+        </form>";
+}
+
+
+if(isset($_POST['action'])){
+    if($_POST['action'] == 'call_this') {
+
+  // call removeday() here
+    $cantidad = 2;
+        cantidadReferir($cantidad);
+    }
+}
+
+function cantidadReferir($cantidad){
+    $i = 1;
+    while($i != $cantidad){
+    echo "<div class='form-group'>
+            <input class='form-control input-lg' name='emails$i' id='emails' type='text' placeholder='Correo eléctronico #$i' required>
+        </div>";
+    $i++;
+    }
+}
 ?>

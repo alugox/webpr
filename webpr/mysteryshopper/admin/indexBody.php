@@ -1,3 +1,17 @@
+<script>
+                function myAjax() {
+                  $.ajax({
+                       method : "POST",
+                       url: '../etc/modals.php',
+                       data:{action:'call_this', cantidad: ''},
+                       success:function(html) {
+                       
+                        document.getElementById('textoVacio').innerHTML = html;
+                       }
+
+                  });
+             }
+</script>
 <?php include '../etc/modals.php';?>    
     <!-- COMIENZO DE MODAL: PARTICIPANTES PENDIENTES  -->
     <div id="partPendientes" class="modal fade" role="dialog">
@@ -79,13 +93,13 @@
         </div>
     </div>
 
-    <!-- COMIENZO DE MODAL: HISTORICO DE VISITAS  -->
-    <!--<div id="histVisita" class="modal fade" role="dialog">
+    <!-- COMIENZO DE MODAL: REPORTES DE VISITAS  -->
+    <div id="repVisita" class="modal fade" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">HISTÓRICO DE VISITAS PROGRAMADAS</h4>
+                    <h4 class="modal-title">REPORTES DE VISITAS</h4>
                 </div>
                 <div class="modal-body">
                    <?php //partAct(3, ""); ?>
@@ -96,5 +110,26 @@
             </div>
 
         </div>
-    </div>!-->
+    </div>
+    
+    <!-- COMIENZO DE MODAL: HISTORICO DE VISITAS  -->
+    <div id="invitarP" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">INVITAR A UN PARTICIPANTE</h4>
+                </div>
+                <div class="modal-body">
+                   <?php referir1(); ?>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+
+        </div>
+    </div>    
+    
+    
             <script src="/mysteryshopper/js/funciones.js"></script>

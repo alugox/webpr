@@ -129,7 +129,8 @@ if(isset($_GET["e"])){
                         <button type="button" class="btn-default" data-toggle="modal" data-target="#partPendientes"><b>Participantes Pendientes</b></button>
                         <button type="button" class="btn-default" data-toggle="modal" data-target="#partActivos"><b>Participantes Activos</b></button>
                         <button type="button" class="btn-default" data-toggle="modal" data-target="#progVisita"><b>Programar Visita</b></button>
-                        <!--<button type="button" class="btn-default" data-toggle="modal" data-target="#histVisita"><b>Hist. de Visitas Programadas</b></button>!-->
+                        <button type="button" class="btn-default" data-toggle="modal" data-target="#repVisita"><b>Reportes de Visita</b></button>
+                        <button type="button" class="btn-default" data-toggle="modal" data-target="#invitarP"><b>Invitar a un Participante</b></button>
                         <br><a href='logout.php'><button type="button" class="btn-default" data-toggle="modal" data-target="#elimreg">Cerrar Sesión</button></a>
                         <!--<div class="btn-section"><a href="#top" class="btn-default">¡Unéte al Programa!</a></div>-->
 

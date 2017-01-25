@@ -20,6 +20,23 @@
     margin: 0px;
     height: 30px;
 }
+.form-header .btn {
+    height: 35px;
+    width: 30px;
+    background-color: transparent;
+    color: black;
+}
+.form-header .btn:hover {
+    color: #c73d3d;
+    background-color: transparent;
+}
+#referirBoton{
+    height: 55px;
+    width: 100%;
+    background-color: #d34a4a;
+    color: white;
+}
+
 .contenidoInferior{
     width: 85%;
     height: auto;
