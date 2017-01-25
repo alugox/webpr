@@ -1,0 +1,68 @@
+<?php
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Salvador Hairdressing - Mistery Shopper</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    	<!-- CSS Files -->
+        <link href="/mysteryshopper/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="/mysteryshopper/css/font-awesome.min.css" rel="stylesheet">
+        <link href="/mysteryshopper/css/animate.css" rel="stylesheet" media="screen">
+        <link href="/mysteryshopper/css/css-index.css" rel="stylesheet" media="screen">
+        <link href="/mysteryshopper/css/css-index-red.css" rel="stylesheet" media="screen">
+        <link href="/mysteryshopper/css/estilo.css" rel="stylesheet" media="screen">
+
+        <!-- Google Fonts -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" />
+    </head>
+    <body>
+
+<?php
+    require_once "../etc/correos.php";
+    
+    if(isset($_GET['ii'])){
+        $idp = base64_decode($_GET['ii']);
+        $correop = base64_decode($_GET['cc']);
+        if(isset($_GET['tt'])){
+            $tipo = $_GET['tt'];
+            if($tipo == 1){
+                // ENVIAR RECORDATORIO DE COMPLETAR DATOS BANCARIOS
+                enviarRecordatorioBanco($correop);            
+            }
+        } else if(!isset ($_GET['bb'])){
+                enviarRecordatorioBanco($correop);            
+        }
+    } else if(isset ($_GET['re'])){
+        // PROGRAMAR NUEVA CITA - CORREO DE AVISO AL CLIENTE
+
+        $correo = base64_decode($_GET['re']);
+        $fecha = $_SESSION['fecha'];
+        $salones = $_SESSION['salones'];
+        $mensaje = $_SESSION['instruccion'];
+        $descripcion = $_SESSION['descripcion'];
+        $servicios = $_SESSION['servicios'];
+
+        enviarNuevaCita($correo, $fecha, $salones, $mensaje, $descripcion, $servicios);            
+    } else if(isset($_GET['t'])){
+        $idp = base64_decode($_GET['t']);
+        if($_GET['tt'] == 2){
+            // PARTICIPANTE APROBADO
+            $email = getCorreo($idp);
+            $pass = getPassword($idp);
+            enviarMailBienvenida($email, $pass);
+        }
+    } else if (isset($_GET["reg"])){
+        $bandera = $_GET["reg"];
+        if($bandera == 1){
+            enviarAvisoNuevoUsuario();
+        }
+    }
+?>
+<br><div style="width:200px;margin-left: auto;margin-right: auto;"><button type="button" class="btn-primary" onclick="window.open('', '_self', ''); window.close();">Regresar</button></div>
+</body>
+</html>

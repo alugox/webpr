@@ -1,0 +1,67 @@
+.logo img {
+    width: 150px;
+    height: auto;
+}
+#intro {
+    padding: 50px 0 70px;
+}
+#intro2{
+    padding: 15px 0 40px;
+}
+#comment{
+    resize: none;
+}
+#footer{
+    padding: 30px 0 50px;
+}
+#programarVisita{
+    font-size: 15px;
+    padding: 0px 20px 0px 20px;
+    margin: 0px;
+    height: 30px;
+}
+.contenidoInferior{
+    width: 85%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+.visitaTexto1{
+    width: 550px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 0.5em;
+}
+.cuentaTexto1{
+    color: #d34a4a;
+}
+.table {
+    margin-bottom: 0px;
+}
+.table > thead > tr > th, .table > tbody > tr > td {
+    padding: 10px 15px;
+}
+.alert-dismissable .close {
+    right: 0px;
+}
+.modal-header{
+    text-align: center;
+}
+
+@media (min-width: 768px){
+.modal-dialog {
+    width: 80%;
+    margin: 30px auto;
+}
+}
+@media (max-width: 320px){
+.btn-default {
+    margin: 15px 0 10px;
+    padding: 5px 30px;
+}
+.btn-primary {
+    margin: 10px 0 10px;
+    padding: 5px 30px;
+}
+}
