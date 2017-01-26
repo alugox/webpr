@@ -8,7 +8,8 @@ function enviarAvisoNuevoUsuario($email, $nombrec, $pais, $dir1, $phone, $nac, $
           "72" => "<img src='http://www.salvadorhairdressing.com/images/flags/domrep1.png'></img>",
           "249" => "<img src='http://www.salvadorhairdressing.com/images/flags/co1.png'></img>",
           "302" => "<img src='http://www.salvadorhairdressing.com/images/flags/ec1.png'></img>",
-          "304" => "<img src='http://www.salvadorhairdressing.com/images/flags/cu1.png' alt='Curacao'></img>");
+          "304" => "<img src='http://www.salvadorhairdressing.com/images/flags/cu1.png' alt='Curacao'></img>",
+          "378" => "PERU");
 
           $age = getEdad($nac);
 

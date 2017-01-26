@@ -34,7 +34,7 @@ if (isset($_GET["e"])) {
     } else if($estado == 1){
         $mensaje = "<div class='alert alert-success'><strong>¡Tus datos han sido guardados éxitosamente!</strong> Espera nuestro correo de aprobación en los próximos días.</div>";
     } else if($estado == 2){
-        $mensaje = "<div class='alert alert-warning'>Tu cuenta <strong>no se encuentra aprobada.</strong>.</div>";
+        $mensaje = "<div class='alert alert-warning'>Tu cuenta <strong>no se encuentra aprobada</strong>.</div>";
     } else if($estado == 3){
         $mensaje = "<div class='alert alert-warning'>Tu cuenta <strong>aún no se encuentra aprobada.</strong> Debes esperar nuestro correo de aprobación.</div>";
     }
@@ -191,7 +191,7 @@ if (isset($_GET["e"])) {
                            
                         </ul>
                     </div>	
-                    <div class="text-center wow fadeInUp" style="font-size: 14px;">Copyright Backyard 2015, Salvador Peluquerías</div>
+                    <div class="text-center wow fadeInUp" style="font-size: 14px;">Copyright 2016. Salvador Hairdressing</div>
                     <a href="#" class="scrollToTop"><i class="pe-7s-up-arrow pe-va"></i></a>
                 </div>	
             </div>	

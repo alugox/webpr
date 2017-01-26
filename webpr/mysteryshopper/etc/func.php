@@ -1,5 +1,4 @@
 <?php
-
 function consultaPartEstado($iduser){
     require_once "../../sitio/sec/ms/libcon.php";
     $estados = array(0 => "Verificación Pendiente", 1 => "Aprobada", 2 => "No aprobada");
@@ -440,6 +439,34 @@ function procesarPostEncuesta($usuario, $pvid){
         header('location: /mysteryshopper/cuenta/index.php?e=6');
         exit;
     }        
+}
+
+function procesarReferidos(){
+    //require_once "../../sitio/sec/ms/libcon.php";    
+    require_once "../etc/correos.php";
+    
+    if(isset($_POST['referir'])){
+        if(isset($_POST['totalMails'])){
+            $cantidad = $_POST['totalMails'];
+            $i=0;$j=1;
+        } else {
+            $cantidad = 1;
+            $i=0;$j=1;
+        }
+        
+        $recipientes = array();
+        while($i != $cantidad){
+            $valor = $_POST["emails$j"];
+            $recipientes[] = $valor;
+            $i++;$j++;
+        }
+        
+        echo $email_to = implode(',', $recipientes); // your email address
+        //$email_subject = "Contact Form Message"; // email subject line
+        //$thankyou = "thankyou.htm"; // thank you page
+        enviarInvitaciones($email_to);
+        
+    }
 }
 
 ?>

@@ -16,6 +16,8 @@ if (session_status() === PHP_SESSION_NONE) {
     }
 }
 
+require_once "../etc/func.php";
+
 if(isset($_GET["e"])){
     $error = $_GET["e"];
     if($error == 1){
@@ -45,7 +47,12 @@ if(isset($_GET["e"])){
     $msg = "";
     $clase = "";
 }
-    require_once "../etc/func.php";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST['referir'])) {
+        procesarReferidos();
+    }
+}
 /*
  * Panel de Cuenta de Usuario Administrador.
  */
@@ -107,7 +114,7 @@ if(isset($_GET["e"])){
         </div>
 
         <!-- /.intro section -->
-        <div id="intro">
+        <div id="intro" style="padding: 50px 0 20px;">
             <div class="container">
                 <div class="row">
 
@@ -146,6 +153,7 @@ if(isset($_GET["e"])){
                 <div class="col-sm-4 col-sm-offset-4">
                     <!-- /.social links -->
                     <div class="social text-center">
+                        <img src="/images/60-años-min.png" width="100%" height="100%"><br><br>
                         <ul>
                         <li><a class="wow fadeInUp" href="http://www.facebook.com/mundosalvador" data-wow-delay="0.2s"><i class="fa fa-facebook-square"></i></a></li>
                         <li><a class="wow fadeInUp" href="http://www.twitter.com/mundosalvador"><i class="fa fa-twitter"></i></a></li>
@@ -154,7 +162,8 @@ if(isset($_GET["e"])){
                            
                         </ul>
                     </div>	
-                    <div class="text-center wow fadeInUp" style="font-size: 14px;">Copyright Backyard 2015, Salvador Peluquerías</div>
+                    <div class="text-center wow fadeInUp" style="font-size: 14px;">
+                        Copyright 2016. Salvador Hairdressing</div>
                     <a href="#" class="scrollToTop"><i class="pe-7s-up-arrow pe-va"></i></a>
                 </div>	
             </div>	

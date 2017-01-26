@@ -1,17 +1,4 @@
-<script>
-                function myAjax() {
-                  $.ajax({
-                       method : "POST",
-                       url: '../etc/modals.php',
-                       data:{action:'call_this', cantidad: ''},
-                       success:function(html) {
-                       
-                        document.getElementById('textoVacio').innerHTML = html;
-                       }
 
-                  });
-             }
-</script>
 <?php include '../etc/modals.php';?>    
     <!-- COMIENZO DE MODAL: PARTICIPANTES PENDIENTES  -->
     <div id="partPendientes" class="modal fade" role="dialog">
@@ -102,7 +89,7 @@
                     <h4 class="modal-title">REPORTES DE VISITAS</h4>
                 </div>
                 <div class="modal-body">
-                   <?php //partAct(3, ""); ?>
+                   <?php  ?>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
@@ -112,7 +99,7 @@
         </div>
     </div>
     
-    <!-- COMIENZO DE MODAL: HISTORICO DE VISITAS  -->
+    <!-- COMIENZO DE MODAL: INVITAR A UN PARTICIPANTE  -->
     <div id="invitarP" class="modal fade" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -129,7 +116,7 @@
             </div>
 
         </div>
-    </div>    
+    </div>
     
     
-            <script src="/mysteryshopper/js/funciones.js"></script>
+        <!--    <script src="/mysteryshopper/js/funciones.js"></script>-->

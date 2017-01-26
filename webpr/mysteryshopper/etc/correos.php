@@ -627,6 +627,43 @@ function enviarRecordatorioProgr($idpart){
 //        $msg</div>"; 
 }
 
+function enviarInvitaciones($array){
+    $to = $array;
+    //$to = "alugox@gmail.com";
+    $subject = "Salvador Hairdressing: Mystery Shopper - ¡Sé un Cliente Misterioso!";
+
+    $htmlContent = file_get_contents("../etc/correos/nuevoregistro.php");
+
+    // Set content-type header for sending HTML email
+    $headers = "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+
+    // Additional headers
+    $headers .= 'From: Salvador Hairdressing<noreply@salvadorhairdressing.com>' . "\r\n";
+    //$headers .= 'Cc: alugox@gmail.com' . "\r\n";
+    //$headers .= 'Bcc: welcome2@example.com' . "\r\n";
+
+    // Send email
+    if(mail($to,$subject,$htmlContent,$headers)):
+        //header('location: /mysteryshopper/index.php?e=1');
+        //include '../index.php?e=1';
+      return "1";
+//
+//        $msg = "<strong>¡La visita fue programada éxitosamente!</strong><br><br>El correo con Aviso de Nueva Cita fue enviado al Cliente <strong>Éxitosamente</strong>.<br>";
+//        $clase = "alert alert-success alert-dismissable fade in";
+    else:
+        //header('location: /mysteryshopper/index.php?e=0');
+      return "0";
+//        $msg = "<strong>Error</strong> al enviar Correo de Aviso al Cliente.<br>";
+//        $clase = "alert alert-danger alert-dismissable fade in";  
+    endif;
+    
+//    echo "<div class='$clase'>
+//        <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+//        $msg</div>";    
+}
+
+/* FUNCIONES COMPLEMENTARIAS PARA LOS CORREOS */
 
 function getCorreo($idp){
     require_once "../../sitio/sec/ms/libcon.php";
