@@ -20,15 +20,15 @@
     margin: 0px;
     height: 30px;
 }
-.form-header .btn {
-    height: 35px;
-    width: 30px;
-    background-color: transparent;
-    color: black;
+.func {
+    height: 35px !important;
+    width: 30px !important;
+    background-color: transparent !important;
+    color: black !important;
 }
-.form-header .btn:hover {
-    color: #c73d3d;
-    background-color: transparent;
+.func:hover {
+    color: #c73d3d !important;
+    background-color: transparent !important;
 }
 #referirBoton{
     height: 55px;

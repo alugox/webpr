@@ -628,11 +628,11 @@ function enviarRecordatorioProgr($idpart){
 }
 
 function enviarInvitaciones($array){
-    $to = $array;
+    $to = "noreply@salvadorhairdressing.com";
     //$to = "alugox@gmail.com";
     $subject = "Salvador Hairdressing: Mystery Shopper - ¡Sé un Cliente Misterioso!";
 
-    $htmlContent = file_get_contents("../etc/correos/nuevoregistro.php");
+    $htmlContent = file_get_contents("../etc/correos/invitacion.php");
 
     // Set content-type header for sending HTML email
     $headers = "MIME-Version: 1.0" . "\r\n";
@@ -641,7 +641,7 @@ function enviarInvitaciones($array){
     // Additional headers
     $headers .= 'From: Salvador Hairdressing<noreply@salvadorhairdressing.com>' . "\r\n";
     //$headers .= 'Cc: alugox@gmail.com' . "\r\n";
-    //$headers .= 'Bcc: welcome2@example.com' . "\r\n";
+    $headers .= 'Bcc: '.$array. "\r\n";
 
     // Send email
     if(mail($to,$subject,$htmlContent,$headers)):

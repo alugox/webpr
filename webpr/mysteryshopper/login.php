@@ -115,37 +115,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <form class="form-header" role="form" method="POST" id="ms_email">
                                     <input type="hidden" name="u" value="503bdae81fde8612ff4944435">
                                     <input type="hidden" name="id" value="bfdba52708">
-					<?php 
-						if(isset($msg)){
-						    echo $msg;
-						}
-			if($tlogin == "1"){
-			    echo "<div class='form-group'>
-                                  <input class='form-control input-lg' name='email' id='email' type='text' value='$user' placeholder='Ingresa tu correo eléctronico' readonly required>
-                                    </div>
-                                    <div class='form-group'>
-                                        <input class='form-control input-lg' name='password' id='password' type='password' placeholder='Ingresa tu contraseña' autofocus required>
-                                    </div>
-                    			<input type='hidden' name='tipo' value='c'>
+                <?php 
+                        if(isset($msg)){
+                            echo $msg;
+                        }
+                if($tlogin == "1"){
+                    echo "<div class='form-group'>
+                          <input class='form-control input-lg' name='email' id='email' type='text' value='$user' placeholder='Ingresa tu correo eléctronico' readonly required>
+                            </div>
+                            <div class='form-group'>
+                                <input class='form-control input-lg' name='password' id='password' type='password' placeholder='Ingresa tu contraseña' autofocus required>
+                            </div>
+                                <input type='hidden' name='tipo' value='c'>
 
-				<div class='form-group last'>
-                                        <input type='submit' name='ms_pasodos' class='btn btn-warning btn-block btn-lg' value='ENTRAR'>
-                                    </div>";
-} else if($tlogin == "2"){
-			    echo "<div class='form-group'>
-                                  <input class='form-control input-lg' name='email' id='email' type='text' value='$user' placeholder='Usuario Corporativo' readonly required>
-                                    </div>
-                                    <div class='form-group'>
-                                        <input class='form-control input-lg' name='password' id='password' type='password' placeholder='Ingresa tu contrasela' autofocus required>
-                                    </div>
-                    			<input type='hidden' name='tipo' value='d'>
+                        <div class='form-group last'>
+                                <input type='submit' name='ms_pasodos' class='btn btn-warning btn-block btn-lg' value='ENTRAR'>
+                            </div>";
+                    } else if($tlogin == "2"){
+                    echo "<div class='form-group'>
+                          <input class='form-control input-lg' name='email' id='email' type='text' value='$user' placeholder='Usuario Corporativo' readonly required>
+                            </div>
+                            <div class='form-group'>
+                                <input class='form-control input-lg' name='password' id='password' type='password' placeholder='Ingresa tu contrasela' autofocus required>
+                            </div>
+                                <input type='hidden' name='tipo' value='d'>
 
-				<div class='form-group last'>
-                                        <input type='submit' name='ms_pasodos' class='btn btn-warning btn-block btn-lg' value='ENTRAR'>
-                                    </div>";
+                        <div class='form-group last'>
+                                <input type='submit' name='ms_pasodos' class='btn btn-warning btn-block btn-lg' value='ENTRAR'>
+                            </div>";
 
-}?>
-                                    <p class="privacy text-center">Tu información no será compartida. Lee nuestra <a href="privacy.html">política de privacidad</a>.</p>
+                    }?>
+                    <p class="privacy text-center">Tu información no será compartida. Lee nuestra <a href="privacy.html">política de privacidad</a>.</p>
                                 </form>
                             </div>				
 

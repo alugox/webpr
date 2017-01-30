@@ -9,10 +9,10 @@ if (session_status() === PHP_SESSION_NONE) {
         if($hash == "s6a5486dasdas31"){
             $bandera = true;
         } else{
-        //header("location:logout.php");
+        header("location:logout.php");
         }
     } else{
-        //header("location:logout.php");
+        header("location:logout.php");
     }
 }
 
@@ -50,7 +50,17 @@ if(isset($_GET["e"])){
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['referir'])) {
-        procesarReferidos();
+        $referir = procesarReferidos();
+        if($referir == "TRUE"){
+            $msg = "<strong>Las invitaciones fueron enviadas éxitosamente.</strong><br>";
+            $clase = "alert alert-success alert-dismissable fade in";
+        } else if ($referir == "FALSE"){
+            $msg = "<strong>Hubo un error al enviar las invitaciones. Intenta de nuevo.</strong><br>";
+            $clase = "alert alert-danger alert-dismissable fade in";
+        } else{
+             $msg = "<strong>¡Correos enviados!.</strong><br>";
+            $clase = "alert alert-warning alert-dismissable fade in";
+        }
     }
 }
 /*
@@ -136,7 +146,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <button type="button" class="btn-default" data-toggle="modal" data-target="#partPendientes"><b>Participantes Pendientes</b></button>
                         <button type="button" class="btn-default" data-toggle="modal" data-target="#partActivos"><b>Participantes Activos</b></button>
                         <button type="button" class="btn-default" data-toggle="modal" data-target="#progVisita"><b>Programar Visita</b></button>
-                        <button type="button" class="btn-default" data-toggle="modal" data-target="#repVisita"><b>Reportes de Visita</b></button>
+                        <!--<button type="button" class="btn-default" data-toggle="modal" data-target="#repVisita"><b>Reportes de Visita</b></button>-->
                         <button type="button" class="btn-default" data-toggle="modal" data-target="#invitarP"><b>Invitar a un Participante</b></button>
                         <br><a href='logout.php'><button type="button" class="btn-default" data-toggle="modal" data-target="#elimreg">Cerrar Sesión</button></a>
                         <!--<div class="btn-section"><a href="#top" class="btn-default">¡Unéte al Programa!</a></div>-->

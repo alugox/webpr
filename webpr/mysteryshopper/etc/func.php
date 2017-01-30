@@ -262,23 +262,24 @@ function listarVisitas($iduser){
 function listarVisitaCompleta($id, $user, $tipo){
     require_once "../../sitio/sec/ms/libcon.php";
     $asistencia = array(0 => "Programada", 1 => "Asistió", 2 => "No Asistió");
-    $salones = array();$salonesph = array();$salonesdir = array();
+    $salones = array();$salonesph = array();$salonesdir = array();$salonesconc = array();
     $idvisita = $id;
-    $dbhcc = dbconncc();
+    $dbhcc = dbconn();
     mysqli_set_charset($dbhcc, 'utf8');
     if (!$dbhcc) {
         die('Error en Conexión: ' . mysqli_error($dbhcc));
         exit;
     }
     
-    $sqlcc = "SELECT CODIGO, NOMBRE, DIRECCION, TELEFONO from SALONES";
+    $sqlcc = "SELECT ID, CODIGO, NOMBRECOMPLETO, CONCEPTO, DIRECCION, TELEFONO1 from web_salones";
     $searchcc = mysqli_query($dbhcc, $sqlcc);
     $matchcc = mysqli_num_rows($searchcc);
     if ($matchcc > 0) {
         while ($rwcc = mysqli_fetch_array($searchcc)) {
-            $salones[$rwcc['CODIGO']] = $rwcc['NOMBRE'];
-            $salonesph[$rwcc['CODIGO']] = $rwcc['TELEFONO'];
-            $salonesdir[$rwcc['CODIGO']] = ucwords(strtolower($rwcc['DIRECCION']));
+            $salones[$rwcc['ID']] = $rwcc['NOMBRECOMPLETO'];
+            $salonesph[$rwcc['ID']] = $rwcc['TELEFONO1'];
+            $salonesconc[$rwcc['ID']] = $rwcc['CONCEPTO'];
+            $salonesdir[$rwcc['ID']] = ucwords(strtolower($rwcc['DIRECCION']));
         }
     } else {
         echo "";
@@ -307,7 +308,7 @@ function listarVisitaCompleta($id, $user, $tipo){
             
             if($user == $id_usuario){
                 //print_r($salones());
-            if($tipo == 1){echo "<h4>MS#000$id</h4>";}
+            if($tipo == 1){echo "<h4>MS#00$id</h4>";}
             echo "  <br><div class='form-group'><label class='control-label col-sm-5'>Fecha Programada:</label><div class='col-sm-5'><input type='text' class='form-control' name='fecha' value='$fecha' readonly></div></div>
                     <br><div class='form-group'><label class='control-label col-sm-5'>Descripción:</label><div class='col-sm-5'><input type='text' class='form-control' name='desc' value='$desc' readonly></div></div>
                     <br><div class='form-group'><label class='control-label col-sm-5'>Salón Asignado: <a href='#' data-toggle='popover' data-placement='bottom' data-trigger='focus' title='Teléfono: $salonesph[$id_salon]' data-content='Dirección: $salonesdir[$id_salon]'><img src='../images/search_mini.png'></a></label><div class='col-sm-5'><input type='text' class='form-control' name='id_salon' value='$salones[$id_salon]' readonly></div></div>
@@ -315,8 +316,7 @@ function listarVisitaCompleta($id, $user, $tipo){
                     <br><div class='form-group'><label class='control-label col-sm-5'>Servicios a pedir:</label><div class='col-sm-5'><input type='text' class='form-control' name='servicios' value='$servicios' readonly></div></div>
                     <br><h4>Información Financiera:</h4>
                     <br><div class='form-group'><label class='control-label col-sm-5'>Observación sobre el Pago:</label><div class='col-sm-5'><textarea class='form-control' name='obs_pago' readonly>$obs_pago</textarea></div></div>
-                
-                    <br><h4>Información de Asistencia:</h4>
+                    <br><br><h4>Información de Asistencia:</h4>
                     <br><div class='form-group'><label class='control-label col-sm-5'>Estado:</label><div class='col-sm-5'><input type='text' class='form-control' name='asistencia' value='$asistencia[$vis_asist]' readonly></div></div>";
                     listarPostEncuestas($user, $fecha, $idvisita, $tipo);
             
@@ -461,10 +461,16 @@ function procesarReferidos(){
             $i++;$j++;
         }
         
-        echo $email_to = implode(',', $recipientes); // your email address
+        $email_to = implode(',', $recipientes); // your email address
         //$email_subject = "Contact Form Message"; // email subject line
         //$thankyou = "thankyou.htm"; // thank you page
-        enviarInvitaciones($email_to);
+        if(enviarInvitaciones($email_to) == "1"){
+            $valor = "TRUE";
+            return $valor;
+        } else if(enviarInvitaciones($email_to) == "0"){
+            $valor = "FALSE";
+            return $valor;
+        }
         
     }
 }

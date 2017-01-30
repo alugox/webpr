@@ -152,7 +152,7 @@ if(isset($_GET["e"])){
                            
                         </ul>
                     </div>	
-                    <div class="text-center wow fadeInUp" style="font-size: 14px;">Copyright 2016. Salvador Peluquerías</div>
+                    <div class="text-center wow fadeInUp" style="font-size: 14px;">Copyright 2016. Salvador Hairdressing</div>
                     <a href="#" class="scrollToTop"><i class="pe-7s-up-arrow pe-va"></i></a>
                 </div>	
             </div>	

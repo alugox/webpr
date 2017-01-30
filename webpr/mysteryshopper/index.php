@@ -166,12 +166,10 @@ if (isset($_GET["e"])) {
 
                     <!-- /.intro content -->
                     <div class="col-md-6 wow slideInRight">
-                        <h2>Mystery Shopper de Salvador Hairdressing</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.
+                        <h2>Mystery Shopper de <b>Salvador Hairdressing</b></h2>
+                        <p style="text-align: justify;"><b style="color:red;font-size: 22px;"><i>Salvador</i></b> se esfuerza en prestar a su clientela un servicio de excelencia, demostrando en todo momento que día a día nos enfocamos en superarnos a nosotros mismos y a las expectativas de quienes requieren de nuestros servicios y productos.<br><br>Te invitamos a ser una herramienta clave en nuestro objetivo de mejora continua, siendo nuestro Mystery Shopper (Cliente Misterioso), y así ayudarnos a detectar aquellos aspectos que debemos mejorar.
                         </p>
-
                         <div class="btn-section"><a href="#top" class="btn-default">¡Unéte al Programa!</a></div>
-
                     </div>
                 </div>			  
             </div>
