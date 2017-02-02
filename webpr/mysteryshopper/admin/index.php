@@ -9,10 +9,10 @@ if (session_status() === PHP_SESSION_NONE) {
         if($hash == "s6a5486dasdas31"){
             $bandera = true;
         } else{
-        header("location:logout.php");
+        //header("location:logout.php");
         }
     } else{
-        header("location:logout.php");
+        //header("location:logout.php");
     }
 }
 

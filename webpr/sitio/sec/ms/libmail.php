@@ -8,13 +8,11 @@ function enviarAvisoNuevoUsuario($email, $nombrec, $pais, $dir1, $phone, $nac, $
           "72" => "<img src='http://www.salvadorhairdressing.com/images/flags/domrep1.png'></img>",
           "249" => "<img src='http://www.salvadorhairdressing.com/images/flags/co1.png'></img>",
           "302" => "<img src='http://www.salvadorhairdressing.com/images/flags/ec1.png'></img>",
-          "304" => "<img src='http://www.salvadorhairdressing.com/images/flags/cu1.png' alt='Curacao'></img>",
-          "378" => "PERU");
+          "304" => "<img src='http://www.salvadorhairdressing.com/images/flags/cu1.png' alt='Curacao'></img>");
 
           $age = getEdad($nac);
 
-    $to = "sistemas@salvadorhairdressing.com";
-    //$to = "alugox@gmail.com";
+    $to = "ceo@salvadorhairdressing.com";
     $subject = "Salvador Hairdressing: Mystery Shopper - ¡Nueva Solicitud de Participante!";
 
     $htmlContent1 = file_get_contents("../sitio/sec/ms/correos/nuevoregistro.php");
@@ -35,8 +33,8 @@ function enviarAvisoNuevoUsuario($email, $nombrec, $pais, $dir1, $phone, $nac, $
 
     // Additional headers
     $headers .= 'From: Salvador Hairdressing<noreply@salvadorhairdressing.com>' . "\r\n";
-    $headers .= 'Cc: programacion@salvadorhairdressing.com' . "\r\n";
-    $headers .= 'Bcc: alugox@gmail.com' . "\r\n";
+    $headers .= 'Cc: oym@salvadorhairdressing.com, sistemas@salvadorhairdressing.com' . "\r\n";
+    $headers .= 'Bcc: programacion@salvadorhairdressing.com' . "\r\n";
 
     // Send email
     if(mail($to,$subject,$htmlContent,$headers)):

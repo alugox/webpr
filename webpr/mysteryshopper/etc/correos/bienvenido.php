@@ -1,17 +1,11 @@
-<?php
-
-$email = $_POST["email"];
-$password = $_POST["password"];
-
-?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns='http://www.w3.org/1999/xhtml'>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1' />
   <title>Salvador Hairdressing - Mystery Shopper</title>
 
-  <style type="text/css">
+  <style type='text/css'>
     /* Take care of image borders and formatting, client hacks */
     img { max-width: 600px; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic;}
     a img { border: none; }
@@ -138,11 +132,11 @@ $password = $_POST["password"];
 
   </style>
 
-  <style type="text/css" media="screen">
+  <style type='text/css' media='screen'>
     @import url(http://fonts.googleapis.com/css?family=Oxygen:400,700);
   </style>
 
-  <style type="text/css" media="screen">
+  <style type='text/css' media='screen'>
     @media screen {
       /* Thanks Outlook 2013! */
       * {
@@ -151,70 +145,70 @@ $password = $_POST["password"];
     }
   </style>
 
-  <style type="text/css" media="only screen and (max-width: 480px)">
+  <style type='text/css' media='only screen and (max-width: 480px)'>
     /* Mobile styles */
     @media only screen and (max-width: 480px) {
 
-      table[class*="container-for-gmail-android"] {
+      table[class*='container-for-gmail-android'] {
         min-width: 290px !important;
         width: 100% !important;
       }
 
-      table[class="w320"] {
+      table[class='w320'] {
         width: 320px !important;
       }
 
-      img[class="force-width-gmail"] {
+      img[class='force-width-gmail'] {
         display: none !important;
         width: 0 !important;
         height: 0 !important;
       }
 
-      a[class="button-width"],
-      a[class="button-mobile"] {
+      a[class='button-width'],
+      a[class='button-mobile'] {
         width: 248px !important;
       }
 
-      td[class*="mobile-header-padding-left"] {
+      td[class*='mobile-header-padding-left'] {
         width: 160px !important;
         padding-left: 0 !important;
       }
 
-      td[class*="mobile-header-padding-right"] {
+      td[class*='mobile-header-padding-right'] {
         width: 160px !important;
         padding-right: 0 !important;
       }
 
-      td[class="header-lg"] {
+      td[class='header-lg'] {
         font-size: 24px !important;
         padding-bottom: 5px !important;
       }
 
-      td[class="header-md"] {
+      td[class='header-md'] {
         font-size: 18px !important;
         padding-bottom: 5px !important;
       }
 
-      td[class="content-padding"] {
+      td[class='content-padding'] {
         padding: 5px 0 30px !important;
       }
 
-       td[class="button"] {
+       td[class='button'] {
         padding: 5px !important;
       }
 
-      td[class*="free-text"] {
+      td[class*='free-text'] {
         padding: 10px 18px 30px !important;
       }
 
-      td[class="info-block"] {
+      td[class='info-block'] {
         display: block !important;
         width: 280px !important;
         padding-bottom: 40px !important;
       }
 
-      td[class="info-img"],
-      img[class="info-img"] {
+      td[class='info-img'],
+      img[class='info-img'] {
         width: 175px !important;
       }
     }
@@ -244,31 +238,31 @@ $password = $_POST["password"];
   </style>
 </head>
 
-<body bgcolor="#f7f7f7">
-<table align="center" cellpadding="0" cellspacing="0" class="container-for-gmail-android" width="100%">
+<body bgcolor='#f7f7f7'>
+<table align='center' cellpadding='0' cellspacing='0' class='container-for-gmail-android' width='100%'>
   <tr>
-    <td align="left" valign="top" width="100%" style="background:repeat-x url(http://s3.amazonaws.com/swu-filepicker/4E687TRe69Ld95IDWyEg_bg_top_02.jpg) #ffffff;">
+    <td align='left' valign='top' width='100%' style='background:repeat-x url(http://s3.amazonaws.com/swu-filepicker/4E687TRe69Ld95IDWyEg_bg_top_02.jpg) #ffffff;'>
       <center>
-      <img src="http://s3.amazonaws.com/swu-filepicker/SBb2fQPrQ5ezxmqUTgCr_transparent.png" class="force-width-gmail">
-        <table cellspacing="0" cellpadding="0" width="100%" bgcolor="#ffffff" background="http://s3.amazonaws.com/swu-filepicker/4E687TRe69Ld95IDWyEg_bg_top_02.jpg" style="background-color:transparent">
+      <img src='http://s3.amazonaws.com/swu-filepicker/SBb2fQPrQ5ezxmqUTgCr_transparent.png' class='force-width-gmail'>
+        <table cellspacing='0' cellpadding='0' width='100%' bgcolor='#ffffff' background='http://s3.amazonaws.com/swu-filepicker/4E687TRe69Ld95IDWyEg_bg_top_02.jpg' style='background-color:transparent'>
           <tr>
-            <td width="100%" height="80" valign="top" style="text-align: center; vertical-align:middle;">
+            <td width='100%' height='80' valign='top' style='text-align: center; vertical-align:middle;'>
             <!--[if gte mso 9]>
-            <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="mso-width-percent:1000;height:80px; v-text-anchor:middle;">
-              <v:fill type="tile" src="http://s3.amazonaws.com/swu-filepicker/4E687TRe69Ld95IDWyEg_bg_top_02.jpg" color="#ffffff" />
-              <v:textbox inset="0,0,0,0">
+            <v:rect xmlns:v='urn:schemas-microsoft-com:vml' fill='true' stroke='false' style='mso-width-percent:1000;height:80px; v-text-anchor:middle;'>
+              <v:fill type='tile' src='http://s3.amazonaws.com/swu-filepicker/4E687TRe69Ld95IDWyEg_bg_top_02.jpg' color='#ffffff' />
+              <v:textbox inset='0,0,0,0'>
             <![endif]-->
               <center>
-                <table cellpadding="0" cellspacing="0" width="600" class="w320">
+                <table cellpadding='0' cellspacing='0' width='600' class='w320'>
                   <tr>
-                    <td class="pull-left mobile-header-padding-left" style="vertical-align: middle;">
-                      <a href="http://www.salvadorhairdressing.com/mysteryshopper"><img width="137" height="47" src="http://www.salvadorhairdressing.com/images/salv-hairdressing-logo.png"></a>
+                    <td class='pull-left mobile-header-padding-left' style='vertical-align: middle;'>
+                      <a href='http://www.salvadorhairdressing.com/mysteryshopper'><img width='137' height='47' src='http://www.salvadorhairdressing.com/images/salv-hairdressing-logo.png'></a>
                     </td>
-                    <td class="pull-right mobile-header-padding-right" style="color: #4d4d4d;">
-                      <a href="http://www.twitter.com/mundosalvador"><img width="33" height="32" src="http://www.salvadorhairdressing.com/images/rrss/twitter.jpg" /></a>
-                      <a href="http://www.facebook.com/SalvadorWorld"><img width="33" height="32" src="http://www.salvadorhairdressing.com/images/rrss/facebook.jpg"/></a>
-                      <a href="http://www.instagram.com/mundosalvador"><img width="33" height="32" src="http://www.salvadorhairdressing.com/images/rrss/instagram.jpg"  /></a>
-                      <a href="https://www.youtube.com/user/salvadorpeluqueria"><img width="33" height="32" src="http://www.salvadorhairdressing.com/images/rrss/youtube.jpg" /></a>
+                    <td class='pull-right mobile-header-padding-right' style='color: #4d4d4d;'>
+                      <a href='http://www.twitter.com/mundosalvador'><img width='33' height='32' src='http://www.salvadorhairdressing.com/images/rrss/twitter.jpg' /></a>
+                      <a href='http://www.facebook.com/SalvadorWorld'><img width='33' height='32' src='http://www.salvadorhairdressing.com/images/rrss/facebook.jpg'/></a>
+                      <a href='http://www.instagram.com/mundosalvador'><img width='33' height='32' src='http://www.salvadorhairdressing.com/images/rrss/instagram.jpg'  /></a>
+                      <a href='https://www.youtube.com/user/salvadorpeluqueria'><img width='33' height='32' src='http://www.salvadorhairdressing.com/images/rrss/youtube.jpg' /></a>
                     </td>
                   </tr>
                 </table>
@@ -284,134 +278,16 @@ $password = $_POST["password"];
     </td>
   </tr>
   <tr>
-    <td align="center" valign="top" width="100%" style="background-color: #f7f7f7;" class="content-padding">
+    <td align='center' valign='top' width='100%' style='background-color: #f7f7f7;' class='content-padding'>
       <center>
-        <table cellspacing="0" cellpadding="0" width="600" class="w320">
+        <table cellspacing='0' cellpadding='0' width='600' class='w320'>
           <tr>
-            <td class="header-lg">
+            <td class='header-lg'>
               ¡Ya eres un Mystery Shopper!
             </td>
           </tr>
           <tr>
-            <td class="free-text">
+            <td class='free-text'>
               Tu solicitud de participación para ser un <b>Mystery Shopper</b> de <b><i>Salvador Hairdressing</i></b>, ¡ha sido aceptada! Esperamos que disfrutes tu tiempo con nosotros. Revisa ahora tu cuenta para <b>responder tu primera encuesta</b>.
             </td>
           </tr>
-          <tr>
-              <td class="free-text">
-                  <br><table class="tabla1">
-                  <tr class="tr1">
-                    <th class="th1" colspan="2">Datos de Acceso</th>
-                  </tr>
-                  <tr class="tr1">
-                    <td class="td1"><b>Usuario:</b></td>
-                    <td class="td1"><?php echo $email; ?></td>
-                  </tr>
-                  <tr class="tr1">
-                    <td class="td1"><b>Contraseña:</b></td>
-                    <td class="td1"><?php echo $password; ?></td>
-                  </tr>
-                </table>
-              </td>
-          </tr>
-          <tr>
-            <td class="button">
-              <div><!--[if mso]>
-                <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://" style="height:45px;v-text-anchor:middle;width:225px;;" arcsize="15%" strokecolor="#ffffff" fillcolor="#ff6f6f">
-                  <w:anchorlock/>
-                  <center style="color:#ffffff;font-family:Helvetica, Arial, sans-serif;font-size:14px;font-weight:regular;">Rellena la Primera Encuesta</center>
-                </v:roundrect>
-              <![endif]--><a class="button-mobile" href="http://www.salvadorhairdressing.com/mysteryshopper"
-              style="background-color:#ff6f6f;border-radius:5px;color:#ffffff;display:inline-block;font-family:'Cabin', Helvetica, Arial, sans-serif;font-size:14px;font-weight:regular;line-height:45px;text-align:center;text-decoration:none;width: 225px;-webkit-text-size-adjust:none;mso-hide:all;">¡Responde tú Primera Encuesta!</a></div>
-            </td>
-          </tr>
-        </table>
-      </center>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" valign="top" width="100%" style="background-color: #ffffff;  border-top: 1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5;">
-      <center>
-        <table cellpadding="0" cellspacing="0" width="600" class="w320">
-          <tr>
-            <td class="content-padding">
-              <table cellpadding="0" cellspacing="0" width="100%">
-                <tr>
-                  <td class="header-md">
-                    Una vez Inicies Sesión podrás...
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-          <tr>
-            <td style="padding-bottom: 75px;">
-              <table cellpadding="0" cellspacing="0" width="100%" style="border-collapse:separate !important;">
-                <tr>
-                 <td class="info-block">
-                    <table cellpadding="0" cellspacing="0" width="100%" style="border-collapse:separate !important;">
-                      <tr>
-                        <td class="block-rounded">
-                          <table cellpadding="0" cellspacing="0" width="100%">
-                            <tr>
-                              <td class="info-img">
-                                <a href=""><img class="info-img" src="http://www.salvadorhairdressing.com/mysteryshopper/images/task-icon.png" alt="img" /></a>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td style="padding: 15px;">
-                                <table cellspacing="0" cellpadding="0" width="100%">
-                                  <tr>
-                                    <td style="text-align:left; width:155px">
-                                      <a href=""><span class="header-sm">Responder tu primera encuesta</span></a><br /><br/>
-                                      Cuando inicies sesión en el portal web, podrás responder tu primera encuesta. En esta encuesta debes <b>rellenar tus datos bancarios</b>. Este <b>es un requesito obligatorio para que nuestro equipo pueda asignarte visitas</b> a salones.
-                                    </td>
-                                    <!--<td style="text-align:right; vertical-align: top;">
-                                      <strong>$29.99</strong>
-                                    </td>!-->
-                                  </tr>
-                                </table>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td style="padding: 15px;">
-                                <div><!--[if mso]>
-                                  <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://" style="height:45px;v-text-anchor:middle;width:228px;" arcsize="15%" strokecolor="#ffffff" fillcolor="#ff6f6f">
-                                    <w:anchorlock/>
-                                    <center style="color:#ffffff;font-family:Helvetica, Arial, sans-serif;font-size:14px;font-weight:regular;">My Account</center>
-                                  </v:roundrect>
-                                <![endif]--><a class="button-width" href="http://www.salvadorhairdressing.com/mysteryshopper"
-                                style="background-color:#ff6f6f;border-radius:5px;color:#ffffff;display:inline-block;font-family:'Cabin', Helvetica, Arial, sans-serif;font-size:14px;font-weight:regular;line-height:45px;text-align:center;text-decoration:none; -webkit-text-size-adjust:none;mso-hide:all;">¡Entra ya!</a></div>
-                              </td>
-                            </tr>
-                          </table>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-        </table>
-      </center>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" valign="top" width="100%" style="background-color: #f7f7f7; height: 100px;">
-      <center>
-        <table cellspacing="0" cellpadding="0" width="600" class="w320">
-          <tr>
-            <td style="padding: 25px 0 25px">
-              <strong>Salvador Hairdressing</strong><br />
-              Programa de Mystery Shopper <br />
-              <i>La información contenida en este correo es confidencial.</i> <br /><br />
-            </td>
-          </tr>
-        </table>
-      </center>
-    </td>
-  </tr>
-</table>
-</body>
-</html>
